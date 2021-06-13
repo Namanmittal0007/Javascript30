@@ -25,6 +25,18 @@ body{
     border-radius: 50%;
     padding: 10px;
 }
+div span{
+    color: white;
+    position: absolute;
+    top: 250px;
+    left: 46%;
+    /* font-size: 2rem; */
+    /* font-weight: 700; */
+    /* border: 2px solid white; */
+    /* box-shadow: 0 0 10px white; */
+    /* padding: 20px 20px; */
+    /* background-color: rgba(0, 0, 0, 0.6); */
+}
 .clock-face{
     position: relative;
     width: 100%;
