@@ -19,17 +19,17 @@ function updatetime(){
      hourhand.style.transform = `rotate(${hourdeg}deg)`;
      console.log("Hour :",hour,hourdeg);
 
-    //to handle the reverse transition of hands from 59 to 0
-    // if(sec==59 || min==59 || hour==59){
-    //     sechand.style.transition = "all 0s";
-    //     minhand.style.transition = "all 0s";
-    //     hourhand.style.transition = "all 0s";
-    // }
-    // else{
-    //     sechand.style.transition = "all 0.05s";
-    //     minhand.style.transition = "all 0.05s";
-    //     hourhand.style.transition = "all 0.05s";
-    // }
+    // to handle the reverse transition of hands from 59 to 0
+    if(sec==59 || min==59 || hour==59){
+        sechand.style.transition = "all 0s";
+        minhand.style.transition = "all 0s";
+        hourhand.style.transition = "all 0s";
+    }
+    else{
+        sechand.style.transition = "all 0.05s";
+        minhand.style.transition = "all 0.05s";
+        hourhand.style.transition = "all 0.05s";
+    }
 }
 
 setInterval(updatetime,1000);
