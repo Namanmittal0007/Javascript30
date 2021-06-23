@@ -1,0 +1,1 @@
+# This repo consists of all my project I made While learning Vanilla JS. 🥳
