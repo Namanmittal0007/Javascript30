@@ -1,18 +1,22 @@
+//selecting sec-hand
 const sechand = document.querySelector('.sec-hand');
+//selecting min-hand
 const minhand = document.querySelector('.min-hand');
+//selecting hour-hand
 const hourhand = document.querySelector('.hour-hand');
 
+//cb func to update the time
 function updatetime(){
+    //adding 90deg to all because default position of hands are horizontal and to make them at 12'o clock
+    // i.e vertical and then moving the req number of deg on each hand accordingly
 
      let sec=new Date().getSeconds();
      let secdeg=sec*(360/60)+90;
      sechand.style.transform = `rotate(${secdeg}deg)`;
-    //  console.log("Seconds :", sec);
      
      let min=new Date().getMinutes();
      let mindeg=min*(360/60)+90;
      minhand.style.transform = `rotate(${mindeg}deg)`;
-    //  console.log("minute :", min );
      
      let hour=new Date().getHours();
      let hourdeg=((hour / 12) * 360) + ((min/60)*30) + 90;
@@ -32,4 +36,5 @@ function updatetime(){
     }
 }
 
+//updating time every second
 setInterval(updatetime,1000);
